@@ -15,6 +15,11 @@
   color: #ff5e19;
 }
 
+.list {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
 @media screen and (min-width: 1440px) {
   .bg-hero {
     background-image: url(images/bannerr.png);

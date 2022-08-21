@@ -1,0 +1,23 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+
+.wrapper {
+  background-color: #151515;
+}
+
+.bg-hero {
+  background-image: url(images/banner.png);
+  background-color: black;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+  object-fit: contain;
+  font-family: "Berkshire Swash", cursive;
+  color: #ff5e19;
+}
+
+@media screen and (min-width: 1440px) {
+  .bg-hero {
+    background-image: url(images/bannerr.png);
+    background-position: center;
+  }
+}

@@ -22,6 +22,14 @@ for (let i = 0; i < selectBtnList.length; i++) {
 document.getElementById("btn-calculate").addEventListener("click", function () {
   const perPlayerCost = gettingDataFromDom("perPlayerCost-field", true);
   const toatalPlayer = document.getElementsByClassName("selected-player");
-  const totalPlayerCost = parseInt(perPlayerCost) * toatalPlayer.length;
+  const totalPlayerCost = perPlayerCost * toatalPlayer.length;
   settingDataIntoDom("player-expences", false, totalPlayerCost);
+});
+
+document.getElementById("btn-total").addEventListener("click", function () {
+  const managerCost = gettingDataFromDom("manager-field", true);
+  const coachCost = gettingDataFromDom("coach-field", true);
+  const playersCost = gettingDataFromDom("player-expences", false);
+  const totalCost = managerCost + coachCost + playersCost;
+  settingDataIntoDom("total", false, totalCost);
 });

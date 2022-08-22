@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Make-Your-Dream-Team</title>
+    <title>Make Your Dream Team</title>
     <!-- tailwind Cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- style sheet -->
@@ -23,10 +23,16 @@
           </p>
         </div>
       </header>
+      <!-- main section -->
       <main class="container mx-auto">
-        <section class="mt-20 flex flex-col md:flex-row gap-4">
-          <div class="grid grid-cols-3 gap-4 flex-1">
-            <div class="text-white border-2 text-center bg-black pb-3">
+        <section
+          class="mt-20 flex flex-col md:flex-row gap-4 mx-4 md:mx-0 pb-20"
+        >
+          <!-- players card -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 flex-1"
+          >
+            <div class="text-white bod text-center bg-black pb-3">
               <img class="w-full" src="images/messi.png" alt="messi-image" />
               <h2 class="player-name text-lg pb-3 pt-6">Lionel messi</h2>
               <p class="pb-3">
@@ -39,7 +45,7 @@
                 Select
               </button>
             </div>
-            <div class="text-white border-2 text-center bg-black pb-3">
+            <div class="text-white bod text-center bg-black pb-3">
               <img class="w-full" src="images/neymar.png" alt="neymar-image" />
               <h2 class="player-name text-lg pb-3 pt-6">Neymar Jr</h2>
               <p class="pb-3">
@@ -52,7 +58,7 @@
                 Select
               </button>
             </div>
-            <div class="text-white border-2 text-center bg-black pb-3">
+            <div class="text-white bod text-center bg-black pb-3">
               <img class="w-full" src="images/mbappe.png" alt="mbappe-image" />
               <h2 class="player-name text-lg pb-3 pt-6">Kilian Mbappe</h2>
               <p class="pb-3">
@@ -65,7 +71,7 @@
                 Select
               </button>
             </div>
-            <div class="text-white border-2 text-center bg-black pb-3">
+            <div class="text-white bod text-center bg-black pb-3">
               <img class="w-full" src="images/ramos.png" alt="ramos-image" />
               <h2 class="player-name text-lg pb-3 pt-6">Sergio Ramos</h2>
               <p class="pb-3">
@@ -78,7 +84,7 @@
                 Select
               </button>
             </div>
-            <div class="text-white border-2 text-center bg-black pb-3">
+            <div class="text-white bod text-center bg-black pb-3">
               <img class="w-full" src="images/renato.png" alt="renato-image" />
               <h2 class="player-name text-lg pb-3 pt-6">Renate Chanches</h2>
               <p class="pb-3">
@@ -91,7 +97,7 @@
                 Select
               </button>
             </div>
-            <div class="text-white border-2 text-center bg-black pb-3">
+            <div class="text-white bod text-center bg-black pb-3">
               <img
                 class="w-full"
                 src="images/machhado.png"
@@ -109,28 +115,38 @@
               </button>
             </div>
           </div>
+          <!-- calculation Cards -->
           <div class="flex flex-col gap-5">
-            <div class="text-white text-center bg-black rounded">
-              <h2 class="py-4 text-2xl font-bold">Selected - V</h2>
-              <ol
-                id="selected-players"
-                class="text-white text-lg font-medium list pb-5 selected-player-list"
-              ></ol>
+            <div class="text-white bg-black rounded">
+              <div class="w-2/4 mx-auto text-center md:text-left">
+                <h2 class="py-4 text-2xl text-orange-500 font-bold">
+                  Selected - V
+                </h2>
+                <ol
+                  id="selected-players"
+                  class="text-white text-lg font-medium list pb-5 selected-player-list"
+                ></ol>
+              </div>
             </div>
             <div class="text-white text-center bg-black py-6 rounded">
-              <h2 class="text-2xl font-bold">Budget</h2>
+              <h2 class="text-2xl text-orange-500 font-bold">Budget</h2>
               <p class="py-7 px-2">
                 Per Player
                 <input
                   id="perPlayerCost-field"
-                  class="py-2 ml-2 mr-3 px-4 rounded bg-black border-2"
+                  class="py-2 ml-3 mr-3 px-4 rounded bg-black border-2"
                   type="number"
                   placeholder="cost of single player"
                 />
               </p>
-              <button id="btn-calculate" class="bg-blue-500 px-8 py-3 rounded">
-                Calculate
-              </button>
+              <div class="px-4">
+                <button
+                  id="btn-calculate"
+                  class="bg-blue-500 px-8 py-3 rounded md:w-full"
+                >
+                  Calculate
+                </button>
+              </div>
               <h2 class="pt-5 text-lg">
                 Player Expenses: $<span id="player-expences">0</span>
               </h2>
@@ -138,7 +154,7 @@
                 Manager
                 <input
                   id="manager-field"
-                  class="py-3 ml-2 mr-3 px-4 rounded bg-black border-2"
+                  class="py-3 ml-2 px-4 rounded bg-black border-2"
                   type="number"
                   placeholder="cost of Manager"
                 />
@@ -147,14 +163,19 @@
                 Coach
                 <input
                   id="coach-field"
-                  class="py-3 ml-3 px-4 rounded bg-black border-2"
+                  class="py-3 ml-6 px-4 rounded bg-black border-2"
                   type="number"
                   placeholder="cost of Coach"
                 />
               </p>
-              <button id="btn-total" class="bg-blue-500 px-8 py-3 rounded">
-                Calculate Total
-              </button>
+              <div class="mx-4">
+                <button
+                  id="btn-total"
+                  class="bg-blue-500 px-8 py-3 rounded md:w-full"
+                >
+                  Calculate Total
+                </button>
+              </div>
               <h2 class="pt-4 text-lg">Total: $<span id="total">0</span></h2>
             </div>
           </div>

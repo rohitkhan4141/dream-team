@@ -19,7 +19,10 @@
   list-style-type: decimal;
   list-style-position: inside;
 }
-
+.bod {
+  border: 1px solid rgba(128, 128, 128, 0.384);
+  border-radius: 4px;
+}
 @media screen and (min-width: 1440px) {
   .bg-hero {
     background-image: url(images/bannerr.png);

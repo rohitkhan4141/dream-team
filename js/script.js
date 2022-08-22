@@ -10,7 +10,7 @@ for (let i = 0; i < selectBtnList.length; i++) {
     count += 1;
     if (count <= 5) {
       selectedPlayerList.innerHTML += `
-        <li class="py-2">${playerList[i].innerText}</li>
+        <li class="py-2 selected-player">${playerList[i].innerText}</li>
         `;
       selectBtnList[i].disabled = true;
     } else {
@@ -18,3 +18,10 @@ for (let i = 0; i < selectBtnList.length; i++) {
     }
   });
 }
+
+document.getElementById("btn-calculate").addEventListener("click", function () {
+  const perPlayerCost = gettingDataFromDom("perPlayerCost-field", true);
+  const toatalPlayer = document.getElementsByClassName("selected-player");
+  const totalPlayerCost = parseInt(perPlayerCost) * toatalPlayer.length;
+  settingDataIntoDom("player-expences", false, totalPlayerCost);
+});

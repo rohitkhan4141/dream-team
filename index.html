@@ -114,7 +114,7 @@
               <h2 class="py-4 text-2xl font-bold">Selected - V</h2>
               <ol
                 id="selected-players"
-                class="text-white text-lg font-medium list pb-5"
+                class="text-white text-lg font-medium list pb-5 selected-player-list"
               ></ol>
             </div>
             <div class="text-white text-center bg-black py-6 rounded">
@@ -131,7 +131,9 @@
               <button id="btn-calculate" class="bg-blue-500 px-8 py-3 rounded">
                 Calculate
               </button>
-              <h2 class="pt-5 text-lg">Player Expenses: $<span>0</span></h2>
+              <h2 class="pt-5 text-lg">
+                Player Expenses: $<span id="player-expences">0</span>
+              </h2>
               <p class="py-5 px-2">
                 Manager
                 <input
